@@ -46,3 +46,10 @@ tH = pi*sqrt( (ri + rf )^3/(8*mu) )
 v_inf = sqrt( mu/a )
 a = -mu/v_inf^2         % por definicion la a en hiperbola es negativa 
 
+
+
+%% FlyBy
+delta_V = 2*v_inf/(1 + (rp*v_inf^2)/mu)
+
+% Distancia asintotica hiperbola de llegada
+delta = rp/v_inf*sqrt( v_inf^2 + 2*mu/rp )
