@@ -3,8 +3,8 @@ close all;
 clear all;
 
 %% DATOS
-rTS = 149.6e6;
-rVS = 107.71e6;
+rT = 149.6e6;
+rV = 107.71e6;
 
 mu_s = 1.327124e11;
 
@@ -21,10 +21,10 @@ v_park = sqrt( mu_E*( 2/r_park - 1/r_park ) );
 
 
 %% Hohmann
-a = (rTS+rVS)/2;
+a = (rT+rV)/2;
 
-ri = rTS;
-rf = rVS;
+ri = rT;
+rf = rV;
 
 % Ciruclar
 vci = sqrt( mu_s/ri );        % v Tierra - Sol
@@ -42,18 +42,8 @@ v_entrada = vef - vcf
 %% Apartado C
 
 v_inf = v_salida;
-ah_salida = sign(v_inf)*mu_E/v_inf^2
-delta_v = sqrt( mu_E*( 2/r_park - 1/ah_salida ) ) - v_park
+a = sign(v_inf)*mu_E/v_inf^2
+delta_v = sqrt( mu_E*( 2/r_park - 1/a ) ) - v_park
 
 
-%% Apartado D
-mu_V = 3.2486e5;
-rV = 6052;
-
-v_inf = v_entrada;
-ah_llegada = -mu_E/v_inf^2
-vh_llegada = sqrt( mu_E*( 2/r_park - 1/ah_llegada ) )
-
-
-av = (250 + 66000 + 2*rV)/2
-vp_v = sqrt( mu_V*(2/(250+rV) - 1/av) )
+%% Apartafo B

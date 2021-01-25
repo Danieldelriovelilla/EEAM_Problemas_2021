@@ -23,11 +23,13 @@ vci = sqrt( mu/ri )
 vcf = sqrt( mu/rf )
 
 % Elpiptica
-vep = sqrt( 2*mu/ri*( rf/( ri + rf ) ) )
-vea = sqrt( 2*mu/rf*( ri/( ri + rf ) ) )
+% Si se aumenta el radio, vei == v perigeo --> vei > vef
+% Si se disminuye el radio, vei == v apogeo --> vef > vei
+vei = sqrt( 2*mu/ri*( rf/( ri + rf ) ) )    
+vef = sqrt( 2*mu/rf*( ri/( ri + rf ) ) )
 
-deltaVA = vep - vci
-deltaVB = vcf - vea
+deltaVA = vei - vci
+deltaVB = vcf - vef
 
 deltaVH = deltaVA + deltaVB
 
@@ -35,3 +37,12 @@ tH = pi*sqrt( (ri + rf )^3/(8*mu) )
 
 
 % Bieliptica
+
+
+
+%% Interplanetaria
+
+% Hiperbola salida/entrada
+v_inf = sqrt( mu/a )
+a = -mu/v_inf^2         % por definicion la a en hiperbola es negativa 
+
