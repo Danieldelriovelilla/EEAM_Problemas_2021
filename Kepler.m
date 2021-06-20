@@ -37,4 +37,4 @@ E = double(vpasolve(eqn,E,[0. pi])); % rad
 teta = 2*atan(sqrt((1+e)/(1-e))*tan(E/2));  % rad
 
 % v escape
-v_esc = sqrt(2*obj.mu/r);       % km/s
+v_esc = sqrt(2*mu/r);       % km/s

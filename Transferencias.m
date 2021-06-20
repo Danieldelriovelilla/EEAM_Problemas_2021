@@ -15,7 +15,7 @@ deltaA/2 = asin( sin(i)*sin(deltaRAAN/2) )
 tanphi = tan(i)*cos(deltaRAAN/2)
 
 %% Transferencia Hohmann
-v_circ = sqrt(mu/2)
+v_circ = sqrt(mu/a)
 v_elipt = sqrt( 2*mu/r - mu/a )
 
 % Ciruclar

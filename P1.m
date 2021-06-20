@@ -5,8 +5,8 @@ clear all;
 %% DATOS
 mu_E = 398600;           % km^3/s^2
 rT = 6378;               % km
-rp = rT + 600;           % km
-ra = rT + 2000;          % km
+rp = rT+450;           % km
+ra = rT+450;          % km
 
 
 %% Apartado A

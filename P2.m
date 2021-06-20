@@ -7,6 +7,7 @@ mu = 398600;           % km^3/s^2
 J2 = 1.083e-3;
 rE = 6378;               % km
 i = deg2rad(98.5);       % rad
+i = deg2rad(98.6);       % rad
 e = 0;
 
 %% Apartado A
@@ -21,7 +22,7 @@ T = 2*pi*sqrt(a^3/mu)
 % velocidad
 r = a;
 v = sqrt( mu*( 2/r - 1/a ) )
-
+h = a-rE
 
 %% Apartado B
 a2 = a - 300;

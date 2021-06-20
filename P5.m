@@ -42,7 +42,7 @@ v_entrada = vef - vcf
 %% Apartado C
 
 v_inf = v_salida;
-ah_salida = sign(v_inf)*mu_E/v_inf^2
+ah_salida = -mu_E/v_inf^2
 delta_v = sqrt( mu_E*( 2/r_park - 1/ah_salida ) ) - v_park
 
 
